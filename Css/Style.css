@@ -212,6 +212,13 @@ body {
     
     }
 
+    .contacto-titulo,.receta-titulo{
+      font-size: 2rem;
+      color: rgb(184, 76, 60);
+      margin: 1.5rem 0;
+      text-decoration: underline;
+    }
+
 
     /* PRODUCTO */
 
@@ -228,6 +235,14 @@ body {
 
 .card-product:hover {
   transform: translateY(-5px);
+}
+
+.p-h1-produ{
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 1rem 0;
+
 }
 
 .card-product img {
@@ -322,6 +337,70 @@ h2 {
   max-height: 300px;
   border-radius: 10px;
  }
+
+ /* RECETAS */
+
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--color-titulo);
+  margin-bottom: 50px;
+  font-size: 2.8rem;
+}
+
+.receta {
+  background-color: #ffffff;
+  border: 2px solid #f3dede;
+  padding: 25px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.receta:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.receta h2 {
+  color: rgb(184, 76, 60);
+  margin-bottom: 10px;
+  font-size: 1.9rem;
+}
+
+.ingredientes, .preparacion {
+  margin-top: 15px;
+}
+
+ul {
+  list-style: inside square;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+strong {
+  color: var(--color-destacado);
+  font-weight: 600;
+}
+
 
 @media only screen and (max-width: 900px) {
   .logotipo {

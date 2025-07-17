@@ -1,0 +1,49 @@
+.indexheader{
+  background-color: $backgroundcolorprincipal;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  @extend .flexcolumn;
+  align-items: center;
+}
+
+.logotipo {
+  width: 60%;
+  max-width: 20rem;
+  margin-bottom: 10px;
+}
+
+
+.navegacion-superior ul {
+  list-style: none;
+  @extend .flexwrpjustify;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.navegacion-superior a {
+  text-decoration: none;
+  color: $colorprincipal;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.navegacion-superior a:hover {
+  color: $colorprincipal;
+}
+
+.index-h1 {
+  font-size: 2rem;
+  margin: 1.5rem 1rem;
+  color: $colorprincipal;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.index-pheader {
+  font-size: 1rem;
+  color: #000000;
+  text-align: center;
+  padding: 0 1rem;
+}

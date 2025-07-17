@@ -1,23 +1,31 @@
-* {
-  font-family: 'Montserrat', sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-/* INDEX */
-body {
+@charset "UTF-8";
+.flexcolumn, .dueñas, .producto-recomendado, .indexheader {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
+.flexwrpjustify, .productos-container, .navegacion-superior ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-.indexheader{
-  background-color: #f8d9d6;
+.footer-index {
+  background-color: rgb(248, 217, 214);
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: auto;
+}
+
+.footer-index img {
+  width: 5rem;
+  max-width: 100%;
+}
+
+.indexheader {
+  background-color: rgb(248, 217, 214);
   padding: 1.5rem 1rem;
   text-align: center;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -27,12 +35,8 @@ body {
   margin-bottom: 10px;
 }
 
-
 .navegacion-superior ul {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 1rem;
   padding: 0.5rem 0;
 }
@@ -47,13 +51,13 @@ body {
 }
 
 .navegacion-superior a:hover {
-  color: #a33d2f;
+  color: rgb(184, 76, 60);
 }
 
 .index-h1 {
   font-size: 2rem;
   margin: 1.5rem 1rem;
-  color: #b84c3c;
+  color: rgb(184, 76, 60);
   text-decoration: underline;
   text-align: center;
 }
@@ -65,6 +69,44 @@ body {
   padding: 0 1rem;
 }
 
+@media only screen and (max-width: 900px) {
+  .logotipo {
+    width: 80%;
+  }
+  .navegacion-superior ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .index-pheader {
+    font-size: 0.95rem;
+  }
+  .producto-recomendado h2 {
+    font-size: 1.25rem;
+  }
+  .btn-index {
+    font-size: 0.95rem;
+  }
+  .card-product {
+    max-width: 100%;
+  }
+  .prod-h1 {
+    font-size: 1.5rem;
+  }
+}
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* INDEX */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .producto-recomendado {
   max-width: 90%;
   margin: 2rem auto;
@@ -73,8 +115,6 @@ body {
   padding: 1.5rem;
   border-radius: 10px;
   background-color: rgb(253, 253, 253);
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -85,7 +125,7 @@ body {
 }
 
 .producto-recomendado h2 {
-  color: rgb(163, 60, 47);
+  color: rgb(184, 76, 60);
   font-size: 1.5rem;
   margin-top: 1rem;
 }
@@ -104,135 +144,101 @@ body {
 }
 
 .btn-index:hover {
-  background-color: rgb(150, 60, 48);
+  background-color: rgb(184, 76, 60);
 }
-
-.footer-index {
-  background-color: rgb(248, 217, 214);
-  text-align: center;
-  padding: 0.5rem;
-  margin-top: auto;
-}
-
-.footer-index img {
-  width: 5rem;
-  max-width: 100%;
-}
-
 
 /* CONTACTO */
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
- * {
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+.contacto-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
 
-    body {
-      background-color: #fff7f3;
-    }
+.contacto-info, .contacto-formulario {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+}
 
-    header, footer {
-      background-color: #f8d9d6;
-      padding: 1.5rem;
-      text-align: center;
-    }
+.contacto-info h2, .contacto-formulario h2 {
+  margin-bottom: 1rem;
+}
 
-    h1 {
-      margin-bottom: 1rem;
-    }
+.contacto-info p {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
 
-    .contacto-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
-    }
+.contacto-formulario form {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
 
-    .contacto-info, .contacto-formulario {
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      gap: 1rem;
-    }
+input, textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
 
-    .contacto-info h2, .contacto-formulario h2 {
-      margin-bottom: 1rem;
-    }
+button {
+  background-color: #f7a9a8;
+  border: none;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
 
-    .contacto-info p {
-      margin-bottom: 0.8rem;
-      line-height: 1.6;
-    }
+button:hover {
+  background-color: #e58f8e;
+}
 
-    .contacto-formulario form {
-      display: grid;
-      gap: 1rem;
-      padding: 1rem;
-      margin-bottom: 2rem;
-    }
+iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
 
-    input, textarea {
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 0.5rem;
-      font-size: 1rem;
-    }
+footer p {
+  font-size: 0.9rem;
+  color: #5c3c2d;
+}
 
-    button {
-      background-color: #f7a9a8;
-      border: none;
-      color: white;
-      padding: 0.8rem;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      font-size: 1rem;
-    }
+.contacto-titulo {
+  text-align: center;
+  margin-top: 1rem;
+}
 
-    button:hover {
-      background-color: #e58f8e;
-    }
+.contacto-titulo, .receta-titulo {
+  font-size: 2rem;
+  color: rgb(184, 76, 60);
+  margin: 1.5rem 0;
+  text-decoration: underline;
+}
 
-    iframe {
-      width: 100%;
-      height: 200px;
-      border: none;
-      border-radius: 0.5rem;
-      margin-top: 1rem;
-    }
-
-    footer p {
-      font-size: 0.9rem;
-      color: #5c3c2d;
-    }
-
-    .contacto-titulo{
-      text-align: center;
-      margin-top: 1rem;
-    
-    }
-
-    .contacto-titulo,.receta-titulo{
-      font-size: 2rem;
-      color: rgb(184, 76, 60);
-      margin: 1.5rem 0;
-      text-decoration: underline;
-    }
-
-      
-
-
-    /* PRODUCTO */
-
+/* PRODUCTO */
 .card-product {
   width: 100%;
   max-width: 25rem;
   background-color: #fcebea;
   border: 2px solid rgb(184, 76, 60);
   border-radius: 12px;
-  
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -241,12 +247,11 @@ body {
   transform: translateY(-5px);
 }
 
-.p-h1-produ{
+.p-h1-produ {
   text-align: center;
   font-size: 1.2rem;
   color: #333;
   margin: 1rem 0;
-
 }
 
 .card-product img {
@@ -256,7 +261,7 @@ body {
 }
 
 .card-precio {
-  color: rgb(184, 76, 60); 
+  color: rgb(184, 76, 60);
   font-weight: 600;
   font-size: 1.2rem;
   margin: 0.5rem 0;
@@ -282,7 +287,7 @@ body {
 }
 
 .card-btn:hover {
-  background-color: rgb(150, 60, 48);
+  background-color: rgb(184, 76, 60);
 }
 
 .productos-main {
@@ -296,17 +301,12 @@ h2 {
   margin-bottom: 1rem;
   margin: 1rem 0;
   text-decoration: underline;
-  
 }
 
 .productos-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
   margin: 2rem 0;
+  gap: 2rem;
 }
-
 
 .prod-h1 {
   margin: 1rem 0;
@@ -336,22 +336,15 @@ h2 {
   display: block;
   margin: 1rem auto;
 }
- .img-producto {
+
+.img-producto {
   max-width: 100%;
   max-height: 300px;
   border-radius: 10px;
- }
-
- /* RECETAS */
-
-  * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
+/* RECETAS */
 body {
-
   line-height: 1.6;
   padding: 20px;
 }
@@ -375,13 +368,13 @@ h1 {
   padding: 25px;
   margin-bottom: 40px;
   border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
 
 .receta:hover {
   transform: scale(1.02);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .receta h2 {
@@ -401,100 +394,65 @@ ul {
 }
 
 strong {
-  color: var(--color-destacado);
   font-weight: 600;
 }
 
 /* SOBRE NOSOTROS */
-
 body.info {
   background-color: rgb(184, 76, 60);
- 
-  }
-
-  .carousel-item img {
-      height: 700px;
-      object-fit: cover;
-    }
-
-    .contenedor {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      color: rgb(184, 76, 60);
-      
-    }
-    h2 {
-      text-align: center;
-      font-size: 2.2em;
-      margin-bottom: 10px;
-      color: #b24932;
-    }
-    h4 {
-      text-align: center;
-      font-size: 1.2em;
-      font-weight: 500;
-      color: #8d3d2b;
-      margin-bottom: 30px;
-    }
-    .dueñas {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-    .dueña {
-      background-color: #ffe6e0;
-      padding: 20px;
-      border-radius: 10px;
-      border-left: 6px solid #d66a50;
-    }
-    .dueña h3 {
-      margin-top: 0;
-      color: #a33b24;
-    }
-    .frase-final {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 1.1em;
-      color: #7b2f21;
-    }
-
-    
-
-
-@media only screen and (max-width: 900px) {
-  .logotipo {
-    width: 80%;
-  }
-
-  .navegacion-superior ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .index-pheader {
-    font-size: 0.95rem;
-  }
-
-  .producto-recomendado h2 {
-    font-size: 1.25rem;
-  }
-
-  .btn-index {
-    font-size: 0.95rem;
-  }
-.card-product {
-    max-width: 100%;
-  }
-
-  .prod-h1 {
-    font-size: 1.5rem;
-  }
-   
 }
 
+.carousel-item img {
+  height: 700px;
+  object-fit: cover;
+}
 
+.contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: rgb(184, 76, 60);
+}
 
+h2 {
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  color: rgb(184, 76, 60);
+}
+
+h4 {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: rgb(184, 76, 60);
+  margin-bottom: 30px;
+}
+
+.dueñas {
+  gap: 30px;
+}
+
+.dueña {
+  background-color: #ffe6e0;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 6px solid #d66a50;
+}
+
+.dueña h3 {
+  margin-top: 0;
+  color: rgb(184, 76, 60);
+}
+
+.frase-final {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.1em;
+  color: rgb(184, 76, 60);
+}
+
+/*# sourceMappingURL=style.css.map */

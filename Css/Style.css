@@ -131,7 +131,6 @@ body {
 
     body {
       background-color: #fff7f3;
-      color: #5c3c2d;
     }
 
     header, footer {
@@ -156,6 +155,7 @@ body {
       padding: 2rem;
       border-radius: 1rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      gap: 1rem;
     }
 
     .contacto-info h2, .contacto-formulario h2 {
@@ -170,6 +170,8 @@ body {
     .contacto-formulario form {
       display: grid;
       gap: 1rem;
+      padding: 1rem;
+      margin-bottom: 2rem;
     }
 
     input, textarea {
@@ -218,6 +220,8 @@ body {
       margin: 1.5rem 0;
       text-decoration: underline;
     }
+
+      
 
 
     /* PRODUCTO */
@@ -401,6 +405,65 @@ strong {
   font-weight: 600;
 }
 
+/* SOBRE NOSOTROS */
+
+body.info {
+  background-color: rgb(184, 76, 60);
+ 
+  }
+
+  .carousel-item img {
+      height: 700px;
+      object-fit: cover;
+    }
+
+    .contenedor {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      color: rgb(184, 76, 60);
+      
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      color: #b24932;
+    }
+    h4 {
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: 500;
+      color: #8d3d2b;
+      margin-bottom: 30px;
+    }
+    .dueñas {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .dueña {
+      background-color: #ffe6e0;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 6px solid #d66a50;
+    }
+    .dueña h3 {
+      margin-top: 0;
+      color: #a33b24;
+    }
+    .frase-final {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.1em;
+      color: #7b2f21;
+    }
+
+    
+
 
 @media only screen and (max-width: 900px) {
   .logotipo {
@@ -430,6 +493,8 @@ strong {
   .prod-h1 {
     font-size: 1.5rem;
   }
+   
 }
+
 
 

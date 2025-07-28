@@ -45,21 +45,10 @@ body {
 }
 
 .btn-index {
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: $colorprincipal;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
+@extend .btndulcegusto;
 }
 
-.btn-index:hover {
-  background-color: $colorprincipal;
-}
+
 
 /* CONTACTO */
 

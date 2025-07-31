@@ -138,6 +138,30 @@ body {
       text-decoration: underline;
     }
 
+    @media only screen and (max-width: 600px) {
+      .contacto-container {
+        padding: 1rem;
+      }
+
+      .contacto-info, .contacto-formulario {
+        padding: 1rem;
+      }
+
+      .contacto-titulo {
+        font-size: 1.5rem;
+      }
+
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media only screen and (min-width: 901px) {
+      iframe {
+        height: 400px;
+      }
+    }
+
       
 
 

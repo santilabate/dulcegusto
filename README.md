@@ -12,4 +12,4 @@ Este es un proyecto web hecho con HTML y CSS para una pastelería ficticia.
 - Recetas
 
 ## Autor
-Santiago Labate. 
+Santiago Labate.  

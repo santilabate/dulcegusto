@@ -1,5 +1,5 @@
-@import "./utilities/extends";
-@import "./utilities/variables";
+@import 'utilities/_variables';
+@import 'utilities/_extends';
 
 @import "./layout/footer";
 @import "./layout/header";
@@ -15,9 +15,8 @@
 }
 /* INDEX */
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+@extend %flexcolumn;
+min-height: 100vh;
 }
 
 .producto-recomendado {
@@ -28,7 +27,7 @@ body {
   padding: 1.5rem;
   border-radius: 10px;
   background-color: rgb(253, 253, 253);
-    @extend .flexcolumn;
+  @extend %flexcolumn;
   align-items: center;
 }
 
@@ -98,31 +97,12 @@ body {
       font-size: 1rem;
     }
 
-    button {
-      background-color: #f7a9a8;
-      border: none;
-      color: white;
-      padding: 0.8rem;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    button:hover {
-      background-color: #e58f8e;
-    }
-
     iframe {
       width: 100%;
       height: 200px;
       border: none;
       border-radius: 0.5rem;
       margin-top: 1rem;
-    }
-
-    footer p {
-      font-size: 0.9rem;
-      color: #5c3c2d;
     }
 
     .contacto-titulo{
@@ -211,15 +191,7 @@ body {
 }
 
 .card-btn {
-  width: 100%;
-  background-color: $colorprincipal;
-  color: white;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 0 0 10px 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+@extend .btn-primario
 }
 
 .card-btn:hover {
@@ -241,7 +213,7 @@ h2 {
 }
 
 .productos-container {
-  @extend .flexwrpjustify;
+  @extend %flexwrpjustify;
   margin: 2rem 0;
   gap: 2rem;
 }
@@ -263,17 +235,8 @@ h2 {
 }
 
 .btn-prod {
-  background-color: $colorprincipal;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-  display: block;
-  margin: 1rem auto;
+  @extend .btn-primario;
+ 
 }
  .img-producto {
   max-width: 100%;
@@ -282,14 +245,6 @@ h2 {
  }
 
  /* RECETAS */
-
-
-
-body {
-
-  line-height: 1.6;
-  padding: 20px;
-}
 
 .container {
   max-width: 1100px;
@@ -306,7 +261,7 @@ h1 {
 
 .receta {
   background-color: #ffffff;
-  border: 2px solid #f3dede;
+  border: 2px solid $colorprincipal;
   padding: 25px;
   margin-bottom: 40px;
   border-radius: 20px;
@@ -375,7 +330,7 @@ body.info {
       margin-bottom: 30px;
     }
     .dueñas {
-      @extend .flexcolumn;
+      @extend %flexcolumn;
       gap: 30px;
     }
     .dueña {

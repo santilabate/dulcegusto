@@ -1,15 +1,15 @@
-.flexcolumn{
+%flexcolumn{
   display: flex;
   flex-direction: column;
 }
 
-.flexwrpjustify {
+%flexwrpjustify {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.btndulcegusto{
+%btn-primario {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   background-color: $colorprincipal;

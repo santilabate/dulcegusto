@@ -1,0 +1,41 @@
+ /* RECETAS */
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.receta {
+  width: 80%; 
+  margin: 20px auto;
+  padding: 20px;
+  @extend .btn-radiuscolor;
+  transition: transform 0.3s ease;
+  transform: scale(1); 
+}
+
+.receta:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.receta h2 {
+  color: $colorprincipal;
+  margin-bottom: 10px;
+  font-size: 1.9rem;
+}
+
+.ingredientes, .preparacion {
+  margin-top: 15px;
+}
+
+ul {
+  list-style: inside square;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+strong {
+  font-weight: 600;
+}

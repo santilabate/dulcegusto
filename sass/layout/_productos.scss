@@ -1,0 +1,99 @@
+   /* PRODUCTO */
+
+.card-product {
+  width: 100%;
+  max-width: 25rem;
+  background-color: #fcebea;
+  @extend .btn-radiuscolor;
+  transition: transform 0.3s ease;
+  text-align: center;
+  padding-bottom: 20px;
+  
+}
+
+.card-product:hover {
+  transform: translateY(-5px);
+}
+
+.p-h1-produ{
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 1rem 0;
+
+}
+
+.card-product img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-precio {
+  color: $colorprincipal; 
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.card-auto-precio span {
+  text-decoration: line-through;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.card-btn {
+@extend .btn-primario
+}
+
+.card-btn:hover {
+  background-color: $colorprincipal;
+}
+
+.productos-main {
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+h2 {
+  text-align: center;
+  color: $colorprincipal;
+  margin-bottom: 1rem;
+  margin: 1rem 0;
+  text-decoration: underline;
+  
+}
+
+.productos-container {
+  @extend .flexwrpjustify;
+  margin: 2rem 0;
+  gap: 2rem;
+}
+
+
+.prod-h1 {
+  margin: 1rem 0;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 2rem;
+  color: $colorprincipal;
+}
+
+.p-producto {
+  font-size: 1rem;
+  color: #333;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.btn-prod {
+  @extend .btn-primario;
+ 
+}
+ .img-producto {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 10px;
+  
+ }

@@ -1,0 +1,31 @@
+body {
+@extend .flexcolumn;
+min-height: 100vh;
+}
+
+.producto-recomendado {
+  max-width: 90%;
+  margin: 2rem auto;
+  text-align: center;
+  @extend .btn-radiuscolor;
+  padding: 1.5rem;
+  background-color: rgb(253, 253, 253);
+  @extend .flexcolumn;
+  align-items: center;
+}
+
+.producto-recomendado img {
+  width: 100%;
+  max-width: 25rem;
+  height: auto;
+}
+
+.producto-recomendado h2 {
+  color: $colorprincipal;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.btn-index {
+@extend .btn-primario;
+}

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.flexcolumn, .dueñas, .producto-recomendado, .indexheader {
+.flexcolumn, .dueñas, .producto-recomendado, body, .indexheader {
   display: flex;
   flex-direction: column;
 }
@@ -8,6 +8,28 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.btn-primario, .btn-prod, .card-btn, .btn-contacto, .btn-index {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: rgb(184, 76, 60);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  background-color: rgb(184, 76, 60);
+}
+.btn-primario:hover, .btn-prod:hover, .card-btn:hover, .btn-contacto:hover, .btn-index:hover {
+  background-color: rgb(145.5409836066, 60.1147540984, 47.4590163934);
+}
+
+.btn-radiuscolor, .card-product, .receta, .producto-recomendado {
+  border: 2px solid rgb(184, 76, 60);
+  border-radius: 15px;
 }
 
 .footer-index {
@@ -63,47 +85,13 @@
 }
 
 .index-pheader {
-  font-size:  1rem;
+  font-size: 1rem;
   color: #000000;
   text-align: center;
   padding: 0 1rem;
 }
 
-@media only screen and (max-width: 900px) {
-  .logotipo {
-    width: 80%;
-  }
-  .navegacion-superior ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  .index-pheader {
-    font-size: 0.95rem;
-  }
-  .producto-recomendado h2 {
-    font-size: 1.25rem;
-  }
-  .btn-index {
-    font-size: 0.95rem;
-  }
-  .card-product {
-    max-width: 100%;
-  }
-  .prod-h1 {
-    font-size: 1.5rem;
-  }
-}
-* {
-  font-family: "Montserrat", sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* INDEX */
 body {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -111,9 +99,7 @@ body {
   max-width: 90%;
   margin: 2rem auto;
   text-align: center;
-  border: 1px solid rgb(184, 76, 60);
   padding: 1.5rem;
-  border-radius: 10px;
   background-color: rgb(253, 253, 253);
   align-items: center;
 }
@@ -128,23 +114,6 @@ body {
   color: rgb(184, 76, 60);
   font-size: 1.5rem;
   margin-top: 1rem;
-}
-
-.btn-index {
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: rgb(184, 76, 60);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-}
-
-.btn-index:hover {
-  background-color: rgb(184, 76, 60);
 }
 
 /* CONTACTO */
@@ -193,31 +162,12 @@ input, textarea {
   font-size: 1rem;
 }
 
-button {
-  background-color: #f7a9a8;
-  border: none;
-  color: white;
-  padding: 0.8rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-button:hover {
-  background-color: #e58f8e;
-}
-
 iframe {
   width: 100%;
   height: 200px;
   border: none;
   border-radius: 0.5rem;
   margin-top: 1rem;
-}
-
-footer p {
-  font-size: 0.9rem;
-  color: #5c3c2d;
 }
 
 .contacto-titulo {
@@ -230,30 +180,47 @@ footer p {
   color: rgb(184, 76, 60);
   margin: 1.5rem 0;
   text-decoration: underline;
+  text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
-  .contacto-container {
-    padding: 1rem;
-  }
-
-  .contacto-info, .contacto-formulario {
-    padding: 1rem;
-  }
-
-  .contacto-titulo {
-    font-size: 1.5rem;
-  }
-
-  iframe {
-    height: 250px;
-  }
+/* RECETAS */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 15px;
 }
 
-@media only screen and (min-width: 901px) {
-  iframe {
-    height: 400px;
-  }
+.receta {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+}
+
+.receta:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.receta h2 {
+  color: rgb(184, 76, 60);
+  margin-bottom: 10px;
+  font-size: 1.9rem;
+}
+
+.ingredientes, .preparacion {
+  margin-top: 15px;
+}
+
+ul {
+  list-style: inside square;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+strong {
+  font-weight: 600;
 }
 
 /* PRODUCTO */
@@ -261,10 +228,9 @@ footer p {
   width: 100%;
   max-width: 25rem;
   background-color: #fcebea;
-  border: 2px solid rgb(184, 76, 60);
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .card-product:hover {
@@ -296,18 +262,6 @@ footer p {
   text-decoration: line-through;
   color: #555;
   font-size: 0.95rem;
-}
-
-.card-btn {
-  width: 100%;
-  background-color: rgb(184, 76, 60);
-  color: white;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 0 0 10px 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
 }
 
 .card-btn:hover {
@@ -347,78 +301,10 @@ h2 {
   text-align: center;
 }
 
-.btn-prod {
-  background-color: rgb(184, 76, 60);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-  display: block;
-  margin: 1rem auto;
-}
-
 .img-producto {
   max-width: 100%;
   max-height: 300px;
   border-radius: 10px;
-}
-
-/* RECETAS */
-body {
-  line-height: 1.6;
-  padding: 20px;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 15px;
-}
-
-h1 {
-  text-align: center;
-  color: var(--color-titulo);
-  margin-bottom: 50px;
-  font-size: 2.8rem;
-}
-
-.receta {
-  background-color: #ffffff;
-  border: 2px solid #f3dede;
-  padding: 25px;
-  margin-bottom: 40px;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-}
-
-.receta:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-.receta h2 {
-  color: rgb(184, 76, 60);
-  margin-bottom: 10px;
-  font-size: 1.9rem;
-}
-
-.ingredientes, .preparacion {
-  margin-top: 15px;
-}
-
-ul {
-  list-style: inside square;
-  padding-left: 20px;
-  margin-top: 5px;
-}
-
-strong {
-  font-weight: 600;
 }
 
 /* SOBRE NOSOTROS */
@@ -479,4 +365,52 @@ h4 {
   color: rgb(184, 76, 60);
 }
 
-/*# sourceMappingURL=style.css.map */
+@media only screen and (max-width: 900px) {
+  .logotipo {
+    width: 80%;
+  }
+  .navegacion-superior ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .index-pheader {
+    font-size: 0.95rem;
+  }
+  .producto-recomendado h2 {
+    font-size: 1.25rem;
+  }
+  .btn-index {
+    font-size: 0.95rem;
+  }
+  .card-product {
+    max-width: 100%;
+  }
+  .prod-h1 {
+    font-size: 1.5rem;
+  }
+  iframe {
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .contacto-container {
+    padding: 1rem;
+  }
+  .contacto-info, .contacto-formulario {
+    padding: 1rem;
+  }
+  .contacto-titulo {
+    font-size: 1.5rem;
+  }
+  iframe {
+    height: 250px;
+  }
+}
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=Style.css.map */

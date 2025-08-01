@@ -1,0 +1,54 @@
+/* SOBRE NOSOTROS */
+
+body.info {
+  background-color: $colorprincipal
+  }
+
+  .carousel-item img {
+      height: 700px;
+      object-fit: cover;
+    }
+
+    .contenedor {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      color: $colorprincipal;
+      
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      color: $colorprincipal;
+    }
+    h4 {
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: 500;
+      color: $colorprincipal;
+      margin-bottom: 30px;
+    }
+    .dueñas {
+      @extend .flexcolumn;
+      gap: 30px;
+    }
+    .dueña {
+      background-color: #ffe6e0;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 6px solid #d66a50;
+    }
+    .dueña h3 {
+      margin-top: 0;
+      color: $colorprincipal;
+    }
+    .frase-final {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.1em;
+      color: $colorprincipal;
+    }
